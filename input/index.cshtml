@@ -1,0 +1,21 @@
+ArchiveSources: => GetString("PostSources")
+ArchiveOrderKey: Published
+ArchiveOrderDescending: true
+ArchivePageSize: 5
+---
+
+@{
+	Layout = "_Layout.cshtml";
+}
+
+<h1>Sleeping With Eyes Open</h1>
+
+@foreach (var post in Model.GetChildren()) {
+	<a href="@post.GetLink()">
+		<img src="@($"{post.Destination.Parent}/{post.Destination.FileNameWithoutExtension}.jpg")" alt="Together" />
+	</a>
+}
+
+<footer>
+	Powered by Insomnia Theme
+</footer>

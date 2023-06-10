@@ -1,0 +1,11 @@
+@{
+	Layout = "_Layout.cshtml";
+}
+
+<img src="@($"/{Model.Destination.Parent}/{Model.Destination.FileNameWithoutExtension}.jpg")" alt="@Model.GetTitle()" />
+
+<h1>@Model.GetTitle()</h1>
+
+<article>
+	@RenderBody()
+</article>
