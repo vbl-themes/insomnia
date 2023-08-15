@@ -2,10 +2,11 @@
 	Layout = "_Layout.cshtml";
 }
 
-<img src="@($"/{Model.Destination.Parent}/{Model.Destination.FileNameWithoutExtension}.jpg")" alt="@Model.GetTitle()" />
+<figure>
+	<img src="@($"/{Model.Destination.Parent}/{Model.Destination.FileNameWithoutExtension}.jpg")" alt="@Model.GetTitle()" />
+</figure>
 
-<h1>@Model.GetTitle()</h1>
-
-<article>
+<figcaption>    
+    <h1>@Model.GetTitle()</h1>
 	@RenderBody()
-</article>
+</figcaption>
