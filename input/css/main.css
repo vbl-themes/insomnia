@@ -34,3 +34,43 @@ main ul a img:hover {
 	filter:alpha(opacity=100);
 }
 
+figure {
+	display: flex;
+	gap: 1rem;
+}
+
+figcaption {
+	padding: 1rem;
+	line-height: 2rem;
+}
+
+figure img {
+	height: 100vh;
+}
+
+@media only screen and (max-aspect-ratio: 17/9) and (min-aspect-ratio: 4/3) {
+	figure img {
+		position: fixed;
+		width: 100vw;
+		object-fit: cover;
+	}
+
+	figcaption {
+		position: absolute;
+		top: 90vh;
+		left: 5rem;
+		min-width: 30vw;
+		color: #fff;
+		background: #000a;
+	}
+}
+
+@media only screen and (max-aspect-ratio: 4/3) {
+	figure {
+		flex-direction: column;
+	}
+
+	figure img {
+		height: auto;
+	}
+}

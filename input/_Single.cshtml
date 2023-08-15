@@ -4,9 +4,9 @@
 
 <figure>
 	<img src="@($"/{Model.Destination.Parent}/{Model.Destination.FileNameWithoutExtension}.jpg")" alt="@Model.GetTitle()" />
-</figure>
 
-<figcaption>    
-    <h1>@Model.GetTitle()</h1>
-	@RenderBody()
-</figcaption>
+	<figcaption>    
+	    <h1>@Model.GetTitle()</h1>
+		@RenderBody()
+	</figcaption>
+</figure>
