@@ -1,12 +1,26 @@
 @{
 	Layout = "_Layout.cshtml";
+
+	var inputs = Context.Outputs.Where(x => x.MediaTypeEquals(MediaTypes.Html)).OrderByDescending(x => x.GetDateTime("Published"));
+	var previous = inputs.GetNext(Document)?.GetLink();
+	var next = inputs.GetPrevious(Document)?.GetLink();
 }
 
 <figure>
 	<img src="@($"/{Model.Destination.Parent}/{Model.Destination.FileNameWithoutExtension}.jpg")" alt="@Model.GetTitle()" />
 
-	<figcaption>    
-	    <h1>@Model.GetTitle()</h1>
+	<figcaption>
+		<nav>
+		    <h1>@Model.GetTitle()</h1>
+			<a href="/" class="icon">&#8679;</a>
+		</nav>
 		@RenderBody()
+
+		<time>@Model.GetDateTime("Published").ToString("dd. MMMM yyyy")</time>
+
+		<nav id="expanded">
+			@if(previous != null) { <a href="@previous#expanded" class="icon">&#8678;</a> } else {<span></span>}
+			@if(next != null) { <a href="@next#expanded" class="icon">&#8680;</a> }
+		</nav>
 	</figcaption>
 </figure>

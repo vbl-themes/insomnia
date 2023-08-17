@@ -2,6 +2,15 @@ body, figure {
 	margin: 0;
 }
 
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+.icon {
+	font-size: 2rem;
+}
+
 main {
 	display: flex;
 	flex-direction: column;
@@ -44,6 +53,18 @@ figcaption {
 	line-height: 2rem;
 }
 
+figcaption time {
+	display: inline-block;
+	font-style: italic;
+	margin: 2rem 0;
+}
+
+figcaption nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 figure img {
 	height: 100vh;
 }
@@ -57,11 +78,15 @@ figure img {
 
 	figcaption {
 		position: absolute;
-		top: 90vh;
+		top: 92vh;
 		left: 5rem;
 		min-width: 30vw;
 		color: #fff;
 		background: #000a;
+	}
+	
+	figcaption nav a {
+		color: #fff;
 	}
 }
 
