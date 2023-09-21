@@ -10,17 +10,15 @@
 	<img src="@($"/{Model.Destination.Parent}/{Model.Destination.FileNameWithoutExtension}.jpg")" alt="@Model.GetTitle()" />
 
 	<figcaption>
-		<nav>
-		    <h1>@Model.GetTitle()</h1>
-			<a href="/" class="icon">&#8679;</a>
-		</nav>
+		<a href="#expanded"><nav><h1>@Model.GetTitle()</h1></nav></a>
 		@RenderBody()
 
 		<time>@Model.GetDateTime("Published").ToString("dd. MMMM yyyy")</time>
 
 		<nav id="expanded">
-			@if(previous != null) { <a href="@previous#expanded" class="icon">&#8678;</a> } else {<span></span>}
-			@if(next != null) { <a href="@next#expanded" class="icon">&#8680;</a> }
+			<p>@if(previous != null) { <a href="@previous#expanded" class="icon">&#8656;</a> }</p>
+			<p><a href="/" class="icon">&#8679;</a></p>
+			<p>@if(next != null) { <a href="@next#expanded" class="icon">&#8658;</a> }</p>
 		</nav>
 	</figcaption>
 </figure>
