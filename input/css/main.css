@@ -1,4 +1,6 @@
 body, figure {
+	letter-spacing: 0.1em;
+	font-size: 1.05em;
 	margin: 0;
 }
 
@@ -50,7 +52,7 @@ figure {
 
 figcaption {
 	padding: 1rem;
-	line-height: 2rem;
+	line-height: 2em;
 }
 
 figcaption time {
