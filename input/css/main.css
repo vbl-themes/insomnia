@@ -51,7 +51,6 @@ figure {
 }
 
 figcaption {
-	padding: 1rem;
 	line-height: 2em;
 }
 
@@ -80,11 +79,12 @@ figure img {
 
 	figcaption {
 		position: absolute;
-		top: 92vh;
+		top: 87vh;
 		left: 5rem;
 		min-width: 30vw;
 		color: #fff;
 		background: #000a;
+		padding: 0 1rem;
 	}
 	
 	figcaption a {
@@ -99,5 +99,30 @@ figure img {
 
 	figure img {
 		height: auto;
+	}
+	
+	figcaption {
+		padding: 1rem;
+	}
+
+	figcaption nav {
+		justify-content: space-around;
+	}
+}
+
+@media only screen and (min-aspect-ratio: 17/9) {
+	figcaption {
+		overflow-y: scroll;
+		height: 100vh;
+		width: 100%;
+	}
+	
+	figcaption nav {
+		justify-content: space-around;
+		max-width: 50%;
+	}
+	
+	body {
+		overflow: hidden;
 	}
 }

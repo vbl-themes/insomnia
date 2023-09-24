@@ -10,7 +10,7 @@
 	<img src="@($"/{Model.Destination.Parent}/{Model.Destination.FileNameWithoutExtension}.jpg")" alt="@Model.GetTitle()" />
 
 	<figcaption>
-		<a href="#expanded"><nav><h1>@Model.GetTitle()</h1></nav></a>
+		<a href="#expanded"><h1>@Model.GetTitle()</h1></a>
 		@RenderBody()
 
 		<time>@Model.GetDateTime("Published").ToString("dd. MMMM yyyy")</time>
