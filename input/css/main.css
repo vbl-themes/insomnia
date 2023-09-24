@@ -79,7 +79,7 @@ figure img {
 
 	figcaption {
 		position: absolute;
-		top: 87vh;
+		margin-top: calc(100vh - 4em);
 		left: 5rem;
 		min-width: 30vw;
 		color: #fff;
