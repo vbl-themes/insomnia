@@ -14,7 +14,7 @@ ArchivePageSize: 5
 	<ul>
 	@foreach (var post in Model.GetChildren()) {
 		<li><a href="@post.GetLink()">
-			<img src="@($"{post.Destination.Parent}/{post.Destination.FileNameWithoutExtension}.jpg")" alt="Together" />
+			<img src="@($"{post.Destination.Parent}/{post.Destination.FileNameWithoutExtension}.256.jpg")" alt="@post.GetTitle()" />
 		</a></li>
 	}
 	</ul>
