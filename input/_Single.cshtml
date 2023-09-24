@@ -9,13 +9,13 @@
 <figure>
 	<img src="@($"/{Model.Destination.Parent}/{Model.Destination.FileNameWithoutExtension}.jpg")" alt="@Model.GetTitle()" />
 
-	<figcaption>
+	<figcaption id="expanded">
 		<a href="#expanded"><h1>@Model.GetTitle()</h1></a>
 		@RenderBody()
 
 		<time>@Model.GetDateTime("Published").ToString("dd. MMMM yyyy")</time>
 
-		<nav id="expanded">
+		<nav>
 			<p>@if(previous != null) { <a href="@previous#expanded" class="icon">&#8656;</a> }</p>
 			<p><a href="/" class="icon">&#8679;</a></p>
 			<p>@if(next != null) { <a href="@next#expanded" class="icon">&#8658;</a> }</p>
