@@ -27,6 +27,8 @@ main ul {
 	display: flex;
 	list-style-type: none;
 	gap: 1rem;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 main ul a img {
