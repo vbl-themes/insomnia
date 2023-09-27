@@ -13,7 +13,7 @@
 		<a href="#expanded"><h1>@Model.GetTitle()</h1></a>
 		@RenderBody()
 
-		<time>@Model.GetDateTime("Published").ToString("dd. MMMM yyyy")</time>
+		<time>@Model.GetDateTime("Published").ToLocalTime()</time>
 
 		<nav>
 			<p>@if(previous != null) { <a href="@previous#expanded" class="icon">&#8656;</a> }</p>
