@@ -39,6 +39,7 @@ main ul {
 	gap: 1rem;
 	flex-wrap: wrap;
 	justify-content: center;
+	padding: 0;
 }
 
 main ul a img {
