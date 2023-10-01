@@ -22,3 +22,8 @@
 		</nav>
 	</figcaption>
 </figure>
+
+@section head {
+	<meta property="og:title" content="@Model.GetTitle()" />
+	<meta property="og:image" content="@($"/{Model.Destination.Parent}/{Model.Destination.FileNameWithoutExtension}.256.jpg")" />
+}

@@ -6,6 +6,7 @@
 	<title>Insomnia - Sleeping With Eyes Open</title>
 	<meta name="description" content="Insomnia Picture Blog Site" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	@RenderSection("Head", required: false)
 	<link rel="stylesheet" type="text/css" href="@Context.GetLink("/css/main.css")" />
 	<link rel="stylesheet" media="screen and (max-width: 900px)" href="@Context.GetLink("/css/mobile.css")" />
 	<link rel="alternate" type="application/rss+xml" title="Sleepwalking" href="@Context.GetLink("feed.rss")" />
