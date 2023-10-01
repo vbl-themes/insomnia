@@ -1,3 +1,8 @@
 h1 {
 	font-size: min(7vw, 2em);
 }
+
+main ul a img {
+	filter: initial;
+	opacity: initial;
+}
