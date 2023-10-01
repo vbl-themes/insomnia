@@ -25,5 +25,5 @@
 
 @section head {
 	<meta property="og:title" content="@Model.GetTitle()" />
-	<meta property="og:image" content="@($"/{Model.Destination.Parent}/{Model.Destination.FileNameWithoutExtension}.256.jpg")" />
+	<meta property="og:image" content="@Context.GetLink($"/{Model.Destination.Parent}/{Model.Destination.FileNameWithoutExtension}.256.jpg", true)" />
 }
